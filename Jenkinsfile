@@ -9,7 +9,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 // Checkout code from the repository
-                git 'https://github.com/quxxxch/My-website.git'
+                git credentialsId: 'quxxxch', url: 'https://github.com/quxxxch/My-website.git', branch: 'main'
             }
         }
         stage('Install Dependencies') {
