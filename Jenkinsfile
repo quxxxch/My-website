@@ -21,24 +21,25 @@ pipeline {
         stage('Build') {
             steps {
                 // Build your project if needed
-                sh 'npm run build'
+                sh 'npm run build' // Ensure you have a build script in your package.json
             }
         }
         stage('Test') {
             steps {
                 // Run your tests
-                sh 'npm test'
+                sh 'npm test' // Ensure you have test scripts in your package.json
             }
         }
         stage('Deploy') {
             steps {
-                // Deploy to your server or cloud platform
-                sh '''
-                # Example deployment steps to Heroku
-                heroku login -i
-                git remote add heroku https://git.heroku.com/your-heroku-app.git
-                git push heroku master
-                '''
+                // Example deployment steps to Heroku
+                withCredentials([string(credentialsId: 'HEROKU_API_KEY', variable: 'HEROKU_API_KEY')]) {
+                    sh '''
+                    echo $HEROKU_API_KEY | docker login --username=_ --password-stdin registry.heroku.com
+                    git remote add heroku https://git.heroku.com/your-heroku-app.git
+                    git push heroku master
+                    '''
+                }
             }
         }
     }
