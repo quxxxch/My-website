@@ -1,0 +1,353 @@
+html {
+  scroll-behavior: smooth;
+}
+
+nav {
+  background-color: #111;
+  color: white;
+  padding: 20px 50px;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  background-color: gray;
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+
+.searchInput {
+  border: none;
+  background-color: transparent;
+}
+
+.searchInput::placeholder {
+  color: lightgray;
+}
+
+.features {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 50px;
+}
+
+.feature {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.featureIcon {
+  width: 50px;
+  height: 50px;
+}
+
+.featureTitle {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 20px;
+}
+
+.featureDesc {
+  color: gray;
+  width: 50%;
+  height: 100px;
+}
+
+.gallery {
+  padding: 50px;
+  display: flex;
+}
+
+.galleryItem {
+  flex: 1;
+  padding: 50px;
+}
+
+.galleryImg {
+  width: 100%;
+}
+
+.newSeason {
+  display: flex;
+}
+
+.nsItem {
+  flex: 1;
+  background-color: black;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.nsImg {
+  width: 100%;
+  height: 500px;
+}
+
+.nsTitle {
+  font-size: 40px;
+}
+
+.nsButton {
+  padding: 15px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+
+/* FOOTER SECTION */
+footer {
+  display: flex;
+}
+
+.footerLeft {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  padding: 50px;
+}
+
+.fMenuTitle {
+  font-size: 16px;
+}
+
+.fList {
+  padding: 0;
+  list-style: none;
+}
+
+.fListItem {
+  margin-bottom: 10px;
+  color: gray;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.footerRight {
+  flex: 2;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.fInput {
+  margin-bottom: 10px;
+  font-weight: 300;
+  font-size: 16px;
+}
+
+.fButton {
+  padding: 5px;
+  background-color: black;
+  color: white;
+}
+
+.fIcons {
+  display: flex;
+}
+
+.fIcon {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+.copyright {
+  font-weight: 300;
+  font-size: 14px;
+}
+
+/* ---------------------- */
+.luckyDraw {
+  display: flex;
+}
+
+
+.ldItem {
+  flex: 1;
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.ldImg {
+  width: 100%;
+  height: 500px;
+}
+
+.ldTitle {
+  font-size: 40px;
+  color:rgb(157, 0, 0);
+}
+
+.button {
+  background-color: #1c87c9;
+  -webkit-border-radius: 60px;
+  border-radius: 60px;
+  border: none;
+  color: #eeeeee;
+  cursor: pointer;
+  display: inline-block;
+  font-family: sans-serif;
+  font-size: 20px;
+  padding: 5px 15px;
+  text-align: center;
+  text-decoration: none;
+}
+@keyframes glowing {
+  0% {
+    background-color: #ffa600;
+    box-shadow: 0 0 5px #ffa600;
+  }
+  50% {
+    background-color: #bd7b00;
+    box-shadow: 0 0 20px #bd7b00;
+  }
+  100% {
+    background-color: #e29300;
+    box-shadow: 0 0 5px #e29300;
+  }
+}
+.button {
+  animation: glowing 1300ms infinite;
+}
+
+
+/* ---------------------- */
+
+.section-p1 {
+  padding: 40px 80px;
+
+}
+
+/* Home Page */
+#hero {
+  background-image: url("./images/kb4.jpeg") ;
+  height: 90vh;
+  width: 100%;
+  background-size: cover;
+  background-position: top 25% right 0;
+  padding: 0 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+#hero h4{
+  padding-bottom: 15px;
+}
+#hero h1{
+  color: #088178
+}
+#hero button{
+  background-image: url(./images/button.png);
+  background-color: transparent;
+  color: #088178;
+  border: 0;
+  padding: 14px 80px 14px 65px;
+  background-repeat: no-repeat;
+  cursor:pointer;
+  font-weight: 700;
+  font-size: 15px;
+}
+
+/* Display products */
+#keyboards, #deskmats, #keycaps {
+  text-align: center;
+
+}
+
+#keyboards .pro, #deskmats .pro, #keycaps .pro {
+  width: 23%;
+  min-width: 250px;
+  padding: 10px 12px;
+  border: 1px solid #cce7d0;
+  border-radius: 25px;
+  cursor: pointer;
+  box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.02);
+  margin: 15px 0;
+  transition: 0.2s ease;
+  position: relative;
+}
+
+#keyboards .pro:hover, #deskmats .pro:hover, #keycaps .pro:hover  {
+  box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.06);
+}
+
+#keyboards .pro img, #deskmats .pro img, #keycaps .pro img {
+  width: 100%;
+  border-radius: 20px;
+}
+
+#keyboards .pro .des, #deskmats .pro .des, #keycaps .pro .des {
+  text-align: start;
+  padding: 10px 0;
+}
+
+#keyboards .pro .des span,#deskmats .pro .des span , #keycaps .pro .des span  {
+  color: #606063;
+  font-size: 12px;
+}
+
+#keyboards .pro .des h5, #deskmats .pro .des h5, #keycaps .pro .des h5 {
+  padding-top: 7px;
+  color: #1a1a1a;
+  font-size: 14px;
+}
+
+#keyboards .pro .des i, #deskmats .pro .des i, #keycaps .pro .des i {
+  font-size: 12px;
+  color: rgb(243, 181, 25);
+}
+
+#keyboards .pro .des h4, #deskmats .pro .des h4, #keycaps .pro .des h4 {
+  padding-top: 7px;
+  font-size: 15px;
+  font-weight: 700;
+  color: #088178;
+
+}
+
+#keyboards .pro .cart {
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 50px;
+  background-color: #e8f6ea;
+  font-weight: 500;
+  color: #088178;
+}
+#keyboards .pro-container, #deskmats .pro-container, #keycaps .pro-container{
+  display:flex;
+  justify-content: space-between;
+  padding-top:20px;
+  flex-wrap: wrap;
+}
+
+
+/* ABOUTUS */
+
+#aboutus {
+  background-color: #f8f9fa;
+border-radius: 10px;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+padding: 20px;
+margin: 20px 0;
+}
+#aboutus p {
+  line-height: 1.6;
+}
+
+
