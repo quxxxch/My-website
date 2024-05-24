@@ -12,12 +12,12 @@ pipeline {
                 git credentialsId: 'f23b3dff-7309-4290-8074-c28b615d6c2e', url: 'https://github.com/quxxxch/My-website.git', branch: 'main'
             }
         }
-        stage('Install Dependencies') {
-            steps {
-                // Install npm dependencies
-                sh 'npm install'
-            }
-        }
+        // stage('Install Dependencies') {
+        //     steps {
+        //         // Install npm dependencies
+        //         sh 'npm install'
+        //     }
+        // }
         stage('Build') {
             steps {
                 // Build your project if needed
