@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
       "start": "node index.js",
-      "build": "npm install",
-    "test": "npm test"
+      "build": "npm run build",
+    "test": "jest"
     
   },
   "author": "Giang",
